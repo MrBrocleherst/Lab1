@@ -16,7 +16,7 @@ class Village extends Locality {
                         "Населення: %d осіб\n" +
                         "Площа: %f км²\n" + // %f означає 2 знаки після коми
                         "Густота населення: %.2f осіб/км²", // Обчислення густоти населення
-                name, population, area, utils.calculateDensity(this) // Передаємо поточний об'єкт у метод
+                name, population, area, LocalityUtils.calculateDensity(this) // Передаємо поточний об'єкт у метод
         );
     }
 }

@@ -16,32 +16,30 @@ public class Main {
                 new Village("Chernihiv", 285000, 79.00),
         };
 
-        LocalityUtils objectLocality = new LocalityUtils();
-
-        // Виведення початкових даних
+       // Виведення початкових даних
         System.out.println("Початкові дані населених пунктів:");
         for (Locality locality : localities) {
-            objectLocality.displayInfo(locality);
+            LocalityUtils.displayInfo(locality);
         }
 
         // Проведення змін у населенні (приріст або відтік)
         System.out.println("\nЗміна населення:");
-        objectLocality.changePopulation(localities[0], -50000); // Відтік 50 тис. з Києва
-        objectLocality.changePopulation(localities[1],20000);   // Приріст 20 тис. у Львові
-        objectLocality.changePopulation(localities[2], -100000); // Відтік 100 тис. з Одеси
-        objectLocality.changePopulation(localities[3],30000);   // Приріст 30 тис. у Дніпрі
-        objectLocality.changePopulation(localities[4], -50000);  // Відтік 50 тис. з Харкова
+        LocalityUtils.changePopulation(localities[0], -50000); // Відтік 50 тис. з Києва
+        LocalityUtils.changePopulation(localities[1],20000);   // Приріст 20 тис. у Львові
+        LocalityUtils.changePopulation(localities[2], -100000); // Відтік 100 тис. з Одеси
+        LocalityUtils.changePopulation(localities[3],30000);   // Приріст 30 тис. у Дніпрі
+        LocalityUtils.changePopulation(localities[4], -50000);  // Відтік 50 тис. з Харкова
 
         // Проведення перепису населення у кількох містах
         System.out.println("\nПерепис населення:");
-        objectLocality.conductCensus(localities[0],3100000);  // Нове населення Києва
-        objectLocality.conductCensus(localities[3],970000);   // Нове населення Дніпра
-        objectLocality.conductCensus(localities[7],300000);   // Нове населення Полтави
+        LocalityUtils.conductCensus(localities[0],3100000);  // Нове населення Києва
+        LocalityUtils.conductCensus(localities[3],970000);   // Нове населення Дніпра
+        LocalityUtils.conductCensus(localities[7],300000);   // Нове населення Полтави
 
         // Виведення оновлених даних
         System.out.println("\nДані після перепису:");
         for (Locality locality : localities) {
-            objectLocality.displayInfo(locality);
+            LocalityUtils.displayInfo(locality);
         }
     }
 }

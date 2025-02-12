@@ -12,7 +12,7 @@ class City extends Locality {
                         "Населення: %d осіб\n" +
                         "Площа: %f км²\n" +
                         "Густота населення: %.2f осіб/км²",
-                name, population, area, utils.calculateDensity(this)
+                name, population, area, LocalityUtils.calculateDensity(this)
         );
     }
 }

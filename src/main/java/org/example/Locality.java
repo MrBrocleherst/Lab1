@@ -3,8 +3,6 @@ package org.example;
 // Абстрактний клас, який описує населений пункт
 public abstract class Locality {
 
-    protected static final LocalityUtils utils = new LocalityUtils();
-
     protected String name;
     protected int population;
     protected double area;
@@ -35,7 +33,7 @@ public abstract class Locality {
         if (name != null && !name.trim().isEmpty()) {
             this.name = name;
         } else {
-            System.out.println("Назва не може бути порожньою!");
+            throw new IllegalArgumentException("Назва не може бути порожньою!");
         }
     }
 
@@ -43,7 +41,7 @@ public abstract class Locality {
         if (population >= 0) {
             this.population = population;
         } else {
-            System.out.println("Населення не може бути від'ємним!");
+            throw new IllegalArgumentException("Населення не може бути від'ємним!");
         }
     }
 
@@ -51,7 +49,7 @@ public abstract class Locality {
         if (area > 0) {
             this.area = area;
         } else {
-            System.out.println("Площа повинна бути більше 0!");
+            throw new IllegalArgumentException("Площа повинна бути більше 0!");
         }
     }
 
