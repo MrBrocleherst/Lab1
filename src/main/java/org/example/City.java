@@ -1,10 +1,12 @@
 package org.example;
 
-class City extends Locality {
+
+public class City extends Locality {
 
     public City(String name, int population, double area) {
         super(name, population, area);
     }
+
 
     @Override
     public String toString() {
