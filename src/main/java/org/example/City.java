@@ -1,10 +1,12 @@
 package org.example;
 
-class City extends Locality {
+
+public class City extends Locality {
 
     public City(String name, int population, double area) {
         super(name, population, area);
     }
+
 
     @Override
     public String toString() {
@@ -12,7 +14,7 @@ class City extends Locality {
                         "Населення: %d осіб\n" +
                         "Площа: %f км²\n" +
                         "Густота населення: %.2f осіб/км²",
-                name, population, area, utils.calculateDensity(this)
+                name, population, area, LocalityUtils.calculateDensity(this)
         );
     }
 }
